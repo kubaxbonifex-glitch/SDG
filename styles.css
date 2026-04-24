@@ -1,0 +1,116 @@
+:root {
+  --background: #f5f9fb;
+  --primary: #1565c0;
+  --secondary: #1e88e5;
+  --text: #1f2937;
+  --card: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header.hero {
+  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+  color: white;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 0 0 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
+}
+
+button {
+  border: none;
+  padding: 0.9rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button#learnMoreBtn {
+  background: white;
+  color: var(--primary);
+}
+
+button#actionBtn {
+  background: var(--secondary);
+  color: white;
+}
+
+main {
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.summary,
+.action-section {
+  background: var(--card);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 16px 32px var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  box-shadow: 0 12px 24px var(--shadow);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.action-section .tip {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: #64748b;
+}
+
+@media (max-width: 640px) {
+  header.hero {
+    padding: 3rem 1rem;
+  }
+}
